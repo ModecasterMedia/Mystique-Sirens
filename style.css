@@ -1,3 +1,8 @@
-<style>
-    
-  </style>
+/* style.css */
+:root {
+  --gold: #f3e5ab;
+  --bg: #0f0f0f;
+  --text: #ddd;
+  --accent: #c0a16b;
+}
+/* ... remaining CSS from original style tag ... */
