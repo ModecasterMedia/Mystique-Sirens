@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the mystique of fashion's hidden stories — Mystique Sirens is a cutting-edge AI video production studio." />
+  <meta property="og:image" content="thumbnail.jpg" />
+  <title>Mystique Sirens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #f3e5ab;
+      --bg: #0f0f0f;
+      --text: #ddd;
+      --accent: #c0a16b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lexend Deca', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 15, 15, 0.95);
+      padding: 1rem 2rem;
+      z-index: 10;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    header {
+      display: none;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      margin-bottom: 5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--gold);
+      font-weight: 500;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    article h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+
+    article p {
+      font-weight: 300;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+
+    .video-feature {
+      margin-bottom: 5rem;
+      text-align: center;
+    }
+
+    .video-feature iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+
+    .coming-soon {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-left: 4px solid var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 0.5rem 0;
+      font-weight: 300;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      padding: 4rem 1rem 2rem;
+      border-top: 1px solid #333;
+    }
+
+    .email-signup {
+      background: linear-gradient(135deg, #1a1a1a, #000);
+      padding: 3rem;
+      text-align: center;
+      border: 1px solid #333;
+      border-radius: 10px;
+      margin-top: 2rem;
+      background-image: url('newsletter-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+    }
+
+    .email-signup h2 {
+      margin-bottom: 1rem;
+    }
+
+    .email-signup p {
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .email-signup form {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .email-signup input[type="text"],
+    .email-signup input[type="email"] {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      width: 250px;
+    }
+
+    .email-signup button {
+      padding: 0.75rem 1.5rem;
+      background: var(--gold);
+      border: none;
+      border-radius: 4px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .email-signup button:hover {
+      background: var(--accent);
+    }
+
+    .form-response {
+      color: var(--gold);
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      display: none;
+    }
+
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    [data-animate].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#featured">Stories</a></li>
+      <li><a href="#library">Library</a></li>
+      <li><a href="#planning">Planning</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="video-feature" data-animate>
+      <h2>Logo Reveal</h2>
+      <iframe src="https://www.youtube.com/embed/kQHVsI7sXvU?si=9yMDAcJtlsOMwKsu" allowfullscreen></iframe>
+    </section>
+
+    <section id="featured" data-animate>
+      <h2>Featured Stories</h2>
+      <div class="coming-soon">
+        <h3>Coming Soon: The Heiress Who Chose Mystery Over Fame</h3>
+        <p>A cinematic short exploring the elegance of a life outside the spotlight.</p>
+      </div>
+      <div class="coming-soon">
+        <h3>Coming Soon: The Secret Lives of Famous Models</h3>
+        <p>An AI-generated deep dive into the allure and shadows of fashion fame.</p>
+      </div>
+    </section>
+
+    <section id="library" data-animate>
+      <h2>Prompt Library</h2>
+      <ul>
+        <li><a href="./03_prompts-bank/voiceover-prompts.md">Voiceover Templates</a></li>
+        <li><a href="./03_prompts-bank/runway-visuals.md">Runway Visual Styles</a></li>
+        <li><a href="./03_prompts-bank/titles-and-tags.md">YouTube Titles + Tags</a></li>
+      </ul>
+    </section>
+
+    <section id="planning" data-animate>
+      <h2>Storyboard & Planning</h2>
+      <ul>
+        <li><a href="./01_templates/storyboard-template.md">Storyboard Template</a></li>
+        <li><a href="./02_video-projects/001_template-video/edit-notes.md">Editing Notes</a></li>
+      </ul>
+    </section>
+
+    <section class="email-signup" data-animate>
+      <h2>Join the Mystique Wait List</h2>
+      <p>Be the first to get the full AI production engine templates when they go live.</p>
+      <form action="https://formspree.io/f/xblyavok" method="POST" onsubmit="showConfirmation(event)">
+        <input type="text" name="name" placeholder="Your name">
+        <input type="email" name="email" placeholder="Your email" required>
+        <button type="submit">Notify Me</button>
+      </form>
+      <div class="form-response" id="form-response">Thanks for joing the waitlist, SOme secrets are worth sharing. 🌟</div>
+    </section>
+  </main>
+
+  <footer>
+    © Mystique Sirens — Created with RunwayML, ChatGPT,Elevenlabs, Adobe Premiere and After Effects and a bunch of other weird stuff. 
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+    function showConfirmation(event) {
+      event.preventDefault();
+      const form = event.target;
+      const response = document.getElementById('form-response');
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(() => {
+        response.style.display = 'block';
+        form.reset();
+      });
+    }
+  </script>
+</body>
+</html>
+

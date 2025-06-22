@@ -1,0 +1,124 @@
+<style>
+    :root {
+      --gold: #f3e5ab;
+      --bg: #0f0f0f;
+      --text: #ddd;
+      --accent: #c0a16b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lexend Deca', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), var(--bg));
+      z-index: 1;
+    }
+
+    .tagline {
+      position: absolute;
+      bottom: 3rem;
+      left: 3rem;
+      z-index: 2;
+      font-style: italic;
+      font-size: 1.5rem;
+      color: var(--gold);
+      max-width: 600px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      margin-bottom: 5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--gold);
+      font-weight: 500;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    article h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+
+    article p {
+      font-weight: 300;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 0.5rem 0;
+      font-weight: 300;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      padding: 4rem 1rem 2rem;
+      border-top: 1px solid #333;
+    }
+
+    @media (max-width: 768px) {
+      .tagline {
+        font-size: 1.2rem;
+        left: 1.5rem;
+        right: 1.5rem;
+      }
+    }
+  </style>
