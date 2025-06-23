@@ -47,12 +47,11 @@ body {
 
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: 4.5rem;
   color: #f3e5ab;
   text-shadow: 0 0 8px rgba(243, 229, 171, 0.4);
   letter-spacing: 0.08em;
 }
-
 
 .hero p {
   color: #eee;
@@ -79,7 +78,6 @@ body {
   color: #000;
 }
 
-
 main {
   padding: 2rem;
 }
@@ -93,7 +91,6 @@ h2 {
   text-align: center;
   margin: 3rem 0 2rem;
 }
-
 
 .schedule .grid {
   display: flex;
@@ -191,7 +188,6 @@ h2 {
   color: #d6c386;
 }
 
-
 .preview-link {
   margin-top: 1rem;
   color: #f3e5ab;
@@ -215,11 +211,9 @@ section {
 .subscribe {
   background: #111;
   text-align: center;
-  padding: 3rem;
-  border-top: 1px solid #333;
-  margin-top: 4rem;
-  margin-top: 5rem;
   padding: 4rem 2rem;
+  border-top: 1px solid #333;
+  margin-top: 5rem;
 }
 
 .subscribe input {
@@ -243,9 +237,6 @@ section {
 .subscribe button:hover {
   background-color: #c0a16b;
 }
-
-
-
 
 footer {
   text-align: center;
