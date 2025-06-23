@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,61 +11,88 @@
 </head>
 <body>
 <header class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="hero-reel.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   <div class="overlay">
-    <!-- Headline text removed, since it's baked into the image -->
+    <h1>Mystique Sirens</h1>
+    <p>Unlock the Hidden Mysteries of Allure</p>
+    <a href="#trailer" class="cta-button">Watch Trailer</a>
   </div>
 </header>
-
 
 <div class="animated-banner">
   <p>Coming Soon — Unlocking Hidden Secrets</p>
 </div>
 
-  <main>
-    <section class="schedule">
-      <h2>Series Schedule</h2>
-      <div class="grid">
-        <div><strong>August</strong><p>The Heiress Who Chose Mystery Over Fame</p></div>
-        <div><strong>September</strong><p>The Secret Lives of Famous Models</p></div>
-        <div><strong>October</strong><p>Silhouettes in Obscurity</p></div>
-      </div>
-    </section>
+<main>
+  <section class="schedule">
+    <h2>Series Schedule</h2>
+    <div class="grid">
+      <div><strong>August</strong><p>The Heiress Who Chose Mystery Over Fame</p></div>
+      <div><strong>September</strong><p>The Secret Lives of Famous Models</p></div>
+      <div><strong>October</strong><p>Silhouettes in Obscurity</p></div>
+    </div>
+  </section>
 
-    <section class="featured">
-      <h2>Featured Episodes</h2>
-      <img src="featured-logo.png" alt="Mystique Sirens Logo" class="featured-logo" />
-    </section>
-
-    <section class="coming-soon">
-      <h2>Coming Soon</h2>
-      <div class="card-grid">
-        <div class="card" style="background-image: url('coming-soon-1.png');">
-          <div class="card-text">
-            <p class="label">Coming Soon</p>
-            <h3>The Heiress Who Chose Mystery Over Fame</h3>
-          </div>
-        </div>
-        <div class="card" style="background-image: url('coming-soon-2.jpg');">
-          <div class="card-text">
-            <p class="label">Coming Soon</p>
-            <h3>The Secret Lives of Famous Models</h3>
-          </div>
+  <section class="featured">
+    <h2>Featured Episodes</h2>
+    <div class="episodes">
+      <div class="episode-card">
+        <img src="episode_img.png" alt="Sirens of the Past">
+        <div class="episode-overlay">
+          <h3>Sirens of the Past</h3>
+          <a href="#" class="preview-link">▶ Watch Preview</a>
         </div>
       </div>
-    </section>
+      <div class="episode-card">
+        <img src="episode_img.png" alt="Voices in the Deep">
+        <div class="episode-overlay">
+          <h3>Voices in the Deep</h3>
+          <a href="#" class="preview-link">▶ Watch Preview</a>
+        </div>
+      </div>
+      <div class="episode-card">
+        <img src="episode_img.png" alt="Secrets of the Sea">
+        <div class="episode-overlay">
+          <h3>Secrets of the Sea</h3>
+          <a href="#" class="preview-link">▶ Watch Preview</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="subscribe">
-      <h2>Unlocking more secrets — Subscribe for exclusive updates to your inbox</h2>
-      <form action="https://formspree.io/f/xjkreqoo" method="POST">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <button type="submit">Notify Me</button>
-      </form>
-    </section>
-  </main>
+  <section class="coming-soon">
+    <h2>Coming Soon</h2>
+    <div class="card-grid">
+      <div class="card" style="background-image: url('coming-soon-1.png');">
+        <div class="card-text">
+          <p class="label">Coming Soon</p>
+          <h3>The Heiress Who Chose Mystery Over Fame</h3>
+        </div>
+      </div>
+      <div class="card" style="background-image: url('coming-soon-2.jpg');">
+        <div class="card-text">
+          <p class="label">Coming Soon</p>
+          <h3>The Secret Lives of Famous Models</h3>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    © Mystique Sirens 2025
-  </footer>
+  <section class="subscribe">
+    <h2>Unlock the Secrets Untold— Subscribe for exclusive updates to your inbox</h2>
+    <form action="https://formspree.io/f/xjkreqoo" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <button type="submit">Unlock Untold Secrets</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  © Mystique Sirens 2025
+</footer>
 </body>
 </html>
