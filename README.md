@@ -4,7 +4,7 @@
 # Mystique Sirens
 
 **Where Beauty Meets Mystery**  
-_Stories told through silence, elegance, and cinematic allure._
+Unlocking the hidden secrects of elegance, beauty and allure.
 
 ---
 
@@ -35,11 +35,11 @@ _Stories told through silence, elegance, and cinematic allure._
 
 ## About Mystique Sirens
 
-**Mystique Sirens** explores the hidden lives, unspoken stories, and elegant enigmas behind fashion’s most iconic muses—both real and imagined.  
+**Mystique Sirens** explores the hidden lives, unspoken stories, and elegant enigmas behind beauties most iconic muses— real and imagined.  
 Our channel unveils what the world never saw… and what it never forgot.
 
 > New visual stories every week  
-> Written with ChatGPT. Designed in RunwayML. Edited in Premiere.
+> Built with ChatGPT, Elevenlabs, RunwayML Adobe Premiere, After Effects and over 30 years of audio/visual skills.
 
 ---
 
