@@ -7,6 +7,10 @@ body {
   width: 100%;
 }
 
+h1, h2, h3, .hero h1, .card-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
 .hero {
   position: relative;
   height: 100vh;
