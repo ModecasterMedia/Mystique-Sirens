@@ -188,5 +188,80 @@ h2 {
 }
 
 .preview-link {
-  margin-t
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #f3e5ab;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #f3e5ab;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s ease;
+}
 
+.preview-link:hover {
+  background: #f3e5ab;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  padding: 1rem;
+  color: #f3e5ab;
+  text-align: center;
+}
+
+.card-text .label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #d6c386;
+}
+
+.card-text h3 {
+  font-size: 1.1rem;
+  margin: 0.3rem 0 0;
+}
+
+.subscribe {
+  background: #0e0e0e;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.subscribe input {
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  width: 250px;
+  font-size: 1rem;
+  background-color: #1a1a1a;
+  color: #f3e5ab;
+}
+
+.subscribe button {
+  padding: 1rem 2rem;
+  background: #f3e5ab;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subscribe button:hover {
+  background: #d6c386;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  padding: 2rem 1rem;
+  border-top: 1px solid #333;
+  background: #0b0b0b;
+}
