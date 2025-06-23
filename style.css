@@ -1,3 +1,4 @@
+/* Base & fonts */
 body {
   margin: 0;
   padding: 0;
@@ -6,177 +7,202 @@ body {
   color: #f4e3b2;
   line-height: 1.6;
 }
-
 h1, h2, h3, h4 {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  letter-spacing: 0.08em;
   color: #fcd974;
-  text-align: center;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+p {
+  margin: 0.5em 0;
 }
 
+/* Hero */
 .hero-header {
-  background: url('header-background.jpg') no-repeat center center/cover;
+  background: url('hero-image.jpg') no-repeat center/cover;
   height: 90vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
-
 .hero-overlay {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 40px;
+  background: rgba(0,0,0,0.5);
+  padding: 2rem 3rem;
   border-radius: 16px;
+  text-align: center;
 }
-
 .site-title {
   font-size: 4rem;
-  margin: 0;
-  color: #fcd974;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
 }
-
 .site-subtitle {
-  font-size: 1.5rem;
-  color: #fff;
-  margin: 20px 0;
+  font-size: 1.3rem;
+  color: #eee;
+  margin-bottom: 1.5rem;
 }
-
 .hero-cta {
   display: inline-block;
-  padding: 10px 30px;
+  padding: 0.8rem 2rem;
   border: 2px solid #fcd974;
   border-radius: 30px;
   color: #fcd974;
-  text-decoration: none;
-  font-weight: bold;
   font-size: 1.1rem;
-  transition: background 0.3s, color 0.3s;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
 }
-
 .hero-cta:hover {
   background: #fcd974;
   color: #0b0b0b;
 }
 
+/* Schedule */
 .schedule-section {
-  padding: 60px 20px;
+  padding: 4rem 1rem;
   text-align: center;
 }
-
 .schedule-grid {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  margin-top: 30px;
+  gap: 4rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
-
 .schedule-block h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+.schedule-block p {
+  font-size: 1rem;
+  max-width: 200px;
 }
 
+/* Featured Episodes */
 .featured-section {
-  padding: 60px 20px;
-  background-color: #111;
+  padding: 4rem 1rem;
 }
-
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
-
 .episode-card {
-  background-color: #1a1a1a;
-  padding: 15px;
-  border-radius: 10px;
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
   text-align: center;
 }
-
-.episode-card img {
-  width: 100%;
-  border-radius: 10px;
+.episode-thumb {
+  position: relative;
 }
-
+.episode-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.episode-thumb:hover img {
+  transform: scale(1.05);
+}
+.play-overlay {
+  position: absolute;
+  font-size: 3rem;
+  color: rgba(252, 217, 116, 0.9);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  pointer-events: none;
+}
+.episode-card h3 {
+  margin: 1rem 0 0.5rem;
+}
 .episode-card a {
   display: inline-block;
-  margin-top: 10px;
+  margin-bottom: 1rem;
   color: #fcd974;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
 }
 
+/* Coming Soon */
 .coming-soon {
-  padding: 60px 20px;
+  padding: 4rem 1rem;
 }
-
 .coming-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  gap: 2rem;
+  margin-top: 2rem;
 }
-
 .coming-card {
-  background-color: #1a1a1a;
-  padding: 20px;
-  border-radius: 10px;
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 12px;
   text-align: center;
-  color: #fff;
 }
-
 .badge {
-  background-color: #fcd974;
-  color: #111;
-  padding: 4px 12px;
-  font-weight: bold;
-  border-radius: 20px;
-  font-size: 0.8rem;
   display: inline-block;
-  margin-bottom: 10px;
+  background: #fcd974;
+  color: #111;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
 }
 
+/* Subscribe */
 .subscribe-section {
-  background-color: #111;
-  padding: 60px 20px;
+  background: #111;
+  padding: 4rem 1rem;
   text-align: center;
 }
-
+.subscribe-section h2 {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.8rem;
+  color: #eee;
+}
 .subscribe-form {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
-
-.subscribe-form input[type="text"],
-.subscribe-form input[type="email"] {
-  padding: 10px;
+.subscribe-form input,
+.subscribe-form button {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
   border-radius: 6px;
   border: none;
-  font-size: 1rem;
+}
+.subscribe-form input {
   width: 200px;
 }
-
 .subscribe-form button {
-  background-color: #fcd974;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 6px;
+  background: #fcd974;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: bold;
+  transition: background 0.3s;
+}
+.subscribe-form button:hover {
+  background: #e5c35b;
 }
 
+/* Footer */
 .footer {
-  background-color: #0b0b0b;
+  padding: 2rem 1rem;
   text-align: center;
-  padding: 30px 20px;
+  background: #0b0b0b;
+  color: #888;
   font-size: 0.9rem;
-  color: #ccc;
+}
+.footer p:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
