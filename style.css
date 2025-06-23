@@ -18,34 +18,65 @@ body {
   margin: 0 auto;
 }
 
-.hero {
+.hero-header {
   position: relative;
-  height: 80vh;
-  background: url('hero-bg.jpg') center/cover no-repeat;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 .hero-overlay {
-  background: rgba(0,0,0,0.6);
-  padding: 3rem 2rem;
+  z-index: 1;
   text-align: center;
-  border-radius: 10px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  max-width: 90%;
 }
 
-.hero-overlay h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 4rem;
-  color: var(--gold);
-  text-shadow: 0 0 10px rgba(243,229,171,0.5);
+.site-title {
+  font-size: 4.5rem;
+  font-weight: 700;
   margin-bottom: 1rem;
+  color: #fcd974;
+  text-shadow: 0 0 15px rgba(252, 217, 116, 0.4);
 }
 
-.hero-overlay p {
+.site-subtitle {
   font-size: 1.3rem;
+  color: #fdfdfd;
   margin-bottom: 1.5rem;
 }
+
+.hero-cta {
+  font-size: 1.1rem;
+  color: #fcd974;
+  padding: 10px 30px;
+  border: 2px solid #fcd974;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  background-color: #fcd974;
+  color: #111;
+}
+
 
 .btn-secondary {
   border: 2px solid var(--gold);
