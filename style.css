@@ -44,34 +44,34 @@ h1, h2, h3, h4 {
 
 .overlay {
   z-index: 2;
-  margin-top: 420px;
+  margin-top: 300px;
   text-align: center;
   background: rgba(0, 0, 0, 0.65);
-  padding: 1.5rem 2.5rem;
-  border-radius: 18px;
+  padding: 1.5rem 2rem;
+  border-radius: 14px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
-  max-width: 700px;
-  width: 90%;
+  max-width: 580px;
+  width: 80%;
 }
 
 .hero h1 {
-  font-size: 4.2rem;
+  font-size: 3.2rem;
   color: #f3e5ab;
-  text-shadow: 0 0 16px rgba(255, 228, 181, 0.6);
+  text-shadow: 0 0 14px rgba(255, 228, 181, 0.6);
   margin-bottom: 0.5rem;
 }
 
 .hero p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #eee;
   margin-top: 1rem;
 }
 
 .cta-button {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.8rem 2rem;
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.5rem;
   background: transparent;
   border: 2px solid #f3e5ab;
   border-radius: 25px;
