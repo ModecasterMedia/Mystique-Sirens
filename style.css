@@ -44,10 +44,10 @@ h1, h2, h3, h4 {
 
 .overlay {
   z-index: 2;
-  margin-top: 280px;
+  margin-top: 180px;
   text-align: center;
   background: rgba(0, 0, 0, 0.65);
-  padding: 1.5rem 2rem;
+  padding: 2.5rem 2rem;
   border-radius: 14px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
