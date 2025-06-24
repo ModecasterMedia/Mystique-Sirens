@@ -1,10 +1,11 @@
-/* style.css */
 
+/* Updated CSS with design changes */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Lexend Deca', sans-serif;
-  background-color: #0b0b0b;
+  background: url('bg-ocean.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #f4e3b2;
   line-height: 1.6;
   overflow-x: hidden;
@@ -18,72 +19,49 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-.hero {
-  position: relative;
+.hero.hero-image {
+  background: url('hero-image.png') center/cover no-repeat;
   height: 100vh;
-  overflow: hidden;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  background-color: #000;
-}
-
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: 0;
-}
-
-.overlay {
-  z-index: 2;
-  margin-top: 180px;
+  justify-content: center;
+  position: relative;
   text-align: center;
-  background: rgba(0, 0, 0, 0.65);
-  padding: 2.5rem 2rem;
-  border-radius: 14px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
-  max-width: 480px;
-  width: 70%;
+}
+
+.overlay-text {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+  border-radius: 12px;
+  max-width: 600px;
+  backdrop-filter: blur(5px);
 }
 
 .hero h1 {
-  font-size: 2.4rem;
-  color: #f3e5ab;
-  text-shadow: 0 0 14px rgba(255, 228, 181, 0.6);
-  margin-bottom: 0.5rem;
+  font-size: 4rem;
+  color: #fcd974;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
 }
 
 .hero p {
-  font-size: 1rem;
-  color: #eee;
+  font-size: 1.2rem;
+  color: #ddd;
   margin-top: 1rem;
 }
 
 .cta-button {
-  display: inline-block;
-  margin-top: 1.2rem;
-  padding: 0.6rem 1.5rem;
+  font-size: 1.2rem;
+  border: 2px solid #fcd974;
+  color: #fcd974;
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
   background: transparent;
-  border: 2px solid #f3e5ab;
-  border-radius: 25px;
-  color: #f3e5ab;
-  font-weight: bold;
-  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(252, 217, 116, 0.4);
   text-decoration: none;
-  transition: background 0.3s, color 0.3s;
 }
 
 .cta-button:hover {
-  background-color: #f3e5ab;
+  background: #fcd974;
   color: #000;
 }
 
@@ -92,12 +70,11 @@ main {
 }
 
 h2 {
-  text-align: center;
-  color: #f3e5ab;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-top: 3rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .schedule .grid {
@@ -170,6 +147,11 @@ h2 {
   font-size: 1.4rem;
 }
 
+.play-icon {
+  width: 40px;
+  margin-bottom: 1rem;
+}
+
 .preview-link {
   margin-top: 1rem;
   font-weight: bold;
@@ -215,9 +197,11 @@ h2 {
 }
 
 .card-text h3 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin: 0;
   line-height: 1.4;
+  color: #fcd974;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .subscribe {
