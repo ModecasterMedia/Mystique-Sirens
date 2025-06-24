@@ -1,82 +1,236 @@
-html, body {
+body {
   margin: 0;
   padding: 0;
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: #0b0b0b;
+  color: #ddd;
   width: 100%;
-  height: 100%;
   overflow-x: hidden;
-  background: black;
 }
 
-.hero-header {
+h1, h2, h3, .hero h1, .card-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.hero {
   position: relative;
-  width: 100%;
   height: 100vh;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: center;
+  background-color: #000;
 }
 
 .hero-video {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 0;
 }
 
-/* ✅ Overlay text: placed just below logo (75% from top) */
-.hero-overlay {
-  position: absolute;
-  top: 72%;
-  left: 50%;
-  transform: translateX(-50%);
+.overlay {
   z-index: 2;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   padding: 2rem 3rem;
-  border-radius: 16px;
-  max-width: 90%;
-  opacity: 0;
-  animation: fadeInOverlay 1.2s ease-out 3.5s forwards;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
 }
 
-/* ✨ Branded font style (matches your logo look) */
-.site-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 4.5rem;
-  font-weight: 600;
-  color: #fcd974;
-  text-shadow: 0 0 15px rgba(252, 217, 116, 0.4);
-  margin-bottom: 1rem;
+.hero h1 {
+  font-size: 5rem;
+  color: #f3e5ab;
+  text-shadow: 0 0 12px rgba(255, 228, 181, 0.4);
 }
 
-.site-subtitle {
-  font-family: 'Lexend Deca', sans-serif;
-  font-size: 1.3rem;
-  color: #fdfdfd;
-  margin-bottom: 1.5rem;
+.hero p {
+  font-size: 1.5rem;
+  color: #eee;
+  margin-top: 1rem;
 }
 
-.hero-cta {
-  font-size: 1.1rem;
-  color: #fcd974;
-  padding: 10px 30px;
-  border: 2px solid #fcd974;
-  border-radius: 30px;
-  text-decoration: none;
+.cta-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background: transparent;
+  border: 2px solid #f3e5ab;
+  border-radius: 25px;
+  color: #f3e5ab;
   font-weight: bold;
-  transition: all 0.3s ease;
-}
-.hero-cta:hover {
-  background-color: #fcd974;
-  color: #111;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
 }
 
-@keyframes fadeInOverlay {
-  to {
-    opacity: 1;
-  }
+.cta-button:hover {
+  background-color: #f3e5ab;
+  color: #000;
+}
+
+main {
+  padding: 2rem;
+}
+
+h2 {
+  text-align: center;
+  color: #f3e5ab;
+  font-size: 2.2rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.schedule .grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.schedule .grid div {
+  text-align: center;
+  font-size: 1rem;
+  color: #eee;
+  max-width: 300px;
+}
+
+.episodes, .card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.episode-card, .card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #f3e5ab33;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.episode-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.episode-card:hover img {
+  transform: scale(1.05);
+}
+
+.episode-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.episode-card:hover .episode-overlay {
+  opacity: 1;
+}
+
+.episode-overlay h3 {
+  color: #f3e5ab;
+  font-size: 1.4rem;
+}
+
+.preview-link {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #f3e5ab;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #f3e5ab;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.preview-link:hover {
+  background: #f3e5ab;
+  color: #000;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  padding: 1rem;
+  color: #f3e5ab;
+  text-align: center;
+}
+
+.card-text .label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #d6c386;
+}
+
+.card-text h3 {
+  font-size: 1.1rem;
+  margin: 0.3rem 0 0;
+}
+
+.subscribe {
+  background: #0e0e0e;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.subscribe input {
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.subscribe button {
+  padding: 1rem 2rem;
+  background: #f3e5ab;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subscribe button:hover {
+  background: #d6c386;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  padding: 2rem 1rem;
+  border-top: 1px solid #333;
+  background: #0b0b0b;
 }
