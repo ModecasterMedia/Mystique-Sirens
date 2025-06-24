@@ -216,40 +216,64 @@ h2 {
 }
 
 .subscribe {
-  background: #0e0e0e;
-  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #0b0b0b, #0e0e0e);
+  padding: 5rem 2rem 4rem;
   text-align: center;
-  border-top: 1px solid #333;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  position: relative;
+}
+
+.subscribe h2 {
+  font-size: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+  color: #f3e5ab;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.subscribe form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .subscribe input {
   padding: 1rem;
-  margin: 0.5rem;
-  border: 1px solid #444;
+  border: none;
   border-radius: 4px;
-  width: 250px;
+  width: 240px;
   font-size: 1rem;
+  background: #fff;
+  color: #000;
 }
 
 .subscribe button {
   padding: 1rem 2rem;
-  background: #f3e5ab;
+  background: linear-gradient(145deg, #f3e5ab, #d6c386);
   border: none;
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
+  color: #000;
+  font-size: 1rem;
 }
 
 .subscribe button:hover {
-  background: #d6c386;
+  background: #f9ecbe;
 }
 
 footer {
   text-align: center;
-  font-size: 0.85rem;
-  color: #888;
-  padding: 2rem 1rem;
-  border-top: 1px solid #333;
-  background: #0b0b0b;
+  font-size: 0.9rem;
+  color: #b6b6b6;
+  padding: 1.5rem;
+  background: #000;
+  border-top: 1px solid #222;
+  font-family: 'Lexend Deca', sans-serif;
 }
