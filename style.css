@@ -176,12 +176,37 @@ h2 {
   color: #000;
 }
 
-.card {
-  height: 380px;
-  align-items: flex-end;
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 280px;
+  height: 380px;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #f3e5ab33;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
   transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .card:hover {
@@ -191,10 +216,17 @@ h2 {
 .card-text {
   background: rgba(0, 0, 0, 0.6);
   width: 100%;
+  min-height: 120px;
   padding: 1rem;
   color: #f3e5ab;
   text-align: center;
   backdrop-filter: blur(4px);
+}
+
+.card-text h3 {
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0 0.5rem;
 }
 
 .card-text .label {
