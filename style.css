@@ -175,26 +175,49 @@ h2 {
   color: #000;
 }
 
+.card {
+  position: relative;
+  width: 280px;
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border: 1px solid #f3e5ab33;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
 .card-text {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   width: 100%;
   padding: 1rem;
   color: #f3e5ab;
   text-align: center;
+  backdrop-filter: blur(4px);
 }
 
 .card-text .label {
   font-size: 0.75rem;
   text-transform: uppercase;
   color: #d6c386;
+  margin-bottom: 0.25rem;
 }
 
 .card-text h3 {
   font-size: 1.1rem;
-  margin: 0.3rem 0 0;
+  margin: 0;
+  line-height: 1.4;
 }
+
 
 .subscribe {
   background: #0e0e0e;
