@@ -23,8 +23,9 @@ h1, h2, h3, h4 {
   height: 100vh;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #000;
 }
 
@@ -43,22 +44,26 @@ h1, h2, h3, h4 {
 
 .overlay {
   z-index: 2;
+  margin-top: 420px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 2rem 3rem;
-  border-radius: 12px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
+  background: rgba(0, 0, 0, 0.65);
+  padding: 1.5rem 2.5rem;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
+  max-width: 700px;
+  width: 90%;
 }
 
 .hero h1 {
-  font-size: 5rem;
+  font-size: 4.2rem;
   color: #f3e5ab;
-  text-shadow: 0 0 12px rgba(255, 228, 181, 0.4);
+  text-shadow: 0 0 16px rgba(255, 228, 181, 0.6);
+  margin-bottom: 0.5rem;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #eee;
   margin-top: 1rem;
 }
