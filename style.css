@@ -85,3 +85,132 @@ h1, h2, h3, h4 {
   background: #fcd974;
   color: #000;
 }
+
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Schedule Section */
+.schedule {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.schedule .grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.schedule .grid div {
+  max-width: 250px;
+}
+
+/* Featured Episodes */
+.featured {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.episodes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.episode-card {
+  position: relative;
+  width: 260px;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(252, 217, 116, 0.15);
+}
+
+.episode-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.episode-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(11, 11, 11, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fcd974;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.episode-card:hover .episode-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+.preview-link {
+  color: #fcd974;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.preview-link:hover {
+  text-decoration: underline;
+}
+
+/* Coming Soon Section */
+.coming-soon {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.coming-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.coming-card {
+  width: 220px;
+  border: 1px solid #fcd97422;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(252, 217, 116, 0.1);
+}
+
+.coming-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.coming-card h4 {
+  font-size: 1rem;
+  padding: 1rem;
+  color: #f4e3b2;
+}
