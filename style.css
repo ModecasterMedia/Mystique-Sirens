@@ -1,3 +1,4 @@
+/* General Styling */
 body {
   background-color: #0b0b0b;
   background-image: url('bg-ocean.jpg');
@@ -9,6 +10,7 @@ body {
   margin: 0;
 }
 
+/* Typography */
 h1, h2, h3, h4 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
@@ -17,13 +19,11 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
+/* Hero Section with Video */
 .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero-video {
@@ -34,49 +34,15 @@ h1, h2, h3, h4 {
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: 0;
+  z-index: 1;
   transform: translate(-50%, -50%);
   object-fit: cover;
 }
 
-.overlay-text {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  max-width: 600px;
-  box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
-  color: #fcd974;
-}
-
-}
-.overlay-text.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
+/* Overlay Text */
 .overlay-text {
   position: absolute;
-  top: 60%; /* you can adjust this slightly as needed */
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -92,7 +58,6 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
 }
 
-
 .overlay-text.visible {
   opacity: 1;
   transform: translate(-50%, -50%);
@@ -100,13 +65,10 @@ h1, h2, h3, h4 {
 
 .overlay-text h1 {
   font-size: 3rem;
-  font-family: 'Cormorant Garamond', serif;
-  letter-spacing: 0.1em;
   margin: 1rem 0;
 }
 
 .overlay-text p {
-  font-family: 'Lexend Deca', sans-serif;
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   color: #fff;
@@ -128,18 +90,7 @@ h1, h2, h3, h4 {
   color: #000;
 }
 
-
-main {
-  padding: 2rem;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-top: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
+/* Schedule Section */
 .schedule .grid {
   display: flex;
   justify-content: center;
@@ -150,13 +101,7 @@ h2 {
   text-align: center;
 }
 
-.schedule .grid div p {
-  color: #f4e3b2;
-}
-.schedule .grid div strong {
-  color: #fcd974;
-}
-
+/* Episodes Section */
 .episodes {
   display: flex;
   flex-wrap: wrap;
@@ -164,7 +109,6 @@ h2 {
   gap: 2rem;
   margin: 2rem auto;
   max-width: 1200px;
-  flex-direction: row;
 }
 
 .episode-card {
@@ -185,180 +129,3 @@ h2 {
 }
 
 .episode-card:hover img {
-  transform: scale(1.05);
-}
-
-.episode-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.episode-card:hover .episode-overlay {
-  opacity: 1;
-}
-
-.play-icon {
-  width: 40px;
-  margin-bottom: 1rem;
-}
-
-.episode-overlay h3 {
-  color: #f3e5ab;
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-
-.preview-link {
-  margin-top: 1rem;
-  font-weight: bold;
-  color: #f3e5ab;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 1px solid #f3e5ab;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-.preview-link:hover {
-  background: #f3e5ab;
-  color: #000;
-}
-
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem auto;
-  max-width: 1200px;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 280px;
-  height: 380px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #f3e5ab33;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.card-text {
-  background: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  min-height: 120px;
-  padding: 1rem;
-  color: #f3e5ab;
-  text-align: center;
-  backdrop-filter: blur(4px);
-}
-
-.card-text .label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #d6c386;
-  margin-bottom: 0.25rem;
-}
-
-.card-text h3 {
-  font-size: 1.3rem;
-  margin: 0;
-  line-height: 1.4;
-  color: #fcd974;
-  font-family: 'Cormorant Garamond', serif;
-  text-align: center;
-  padding: 0 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .card-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.subscribe {
-  background: radial-gradient(circle at center, #1c1c1c 0%, #0e0e0e 100%);
-  padding: 5rem 2rem 4rem;
-  text-align: center;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #222;
-  position: relative;
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
-}
-
-.subscribe h2 {
-  font-size: 2rem;
-  font-family: 'Cormorant Garamond', serif;
-  color: #f3e5ab;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.subscribe form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.subscribe input {
-  padding: 1rem;
-  border: none;
-  border-radius: 8px;
-  width: 240px;
-  font-size: 1rem;
-  background: #fff;
-  color: #000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.subscribe button {
-  padding: 1rem 2rem;
-  background: linear-gradient(145deg, #f3e5ab, #d6c386);
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  color: #000;
-  font-size: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.subscribe button:hover {
-  background: #f9ecbe;
-}
-
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #b6b6b6;
-  padding: 2rem 1rem;
-  background: #000;
-  border-top: 1px solid #222;
-  font-family: 'Lexend Deca', sans-serif;
-  letter-spacing: 0.05em;
-}
