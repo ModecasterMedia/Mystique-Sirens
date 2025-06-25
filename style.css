@@ -314,3 +314,10 @@ footer {
   font-family: 'Lexend Deca', sans-serif;
   letter-spacing: 0.05em;
 }
+
+@media (max-width: 768px) {
+  .schedule .grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
