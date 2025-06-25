@@ -95,11 +95,35 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
   max-width: 1000px;
   margin: 2rem auto;
   text-align: center;
 }
+
+.schedule .grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 280px;
+}
+
+.schedule .grid div strong {
+  color: #fcd974;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.schedule .grid div p {
+  margin: 0;
+  color: #f4e3b2;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
 
 /* Episodes Section */
 .episodes {
