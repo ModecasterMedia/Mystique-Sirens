@@ -11,12 +11,13 @@
 <body>
 
 <header class="hero">
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="Logoonlyrevealupper.mp4" type="video/mp4" />
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="Logoonlyrevealupper.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="overlay-text">
+    <img src="featured-logo.png" alt="Mystique Logo" class="logo-icon" />
     <h1>Mystique Sirens</h1>
     <p>Unlocking the Mysteries of Hidden Beauty</p>
     <a href="#trailer" class="cta-button">Trailer Coming Soon</a>
@@ -109,6 +110,14 @@
 <footer>
   © Mystique Sirens 2025. All rights reserved.
 </footer>
-<script src="script.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.querySelector('.overlay-text');
+    setTimeout(() => {
+      overlay.classList.add('visible');
+    }, 1000); // adjust delay to match logo reveal
+  });
+</script>
+
 </body>
 </html>

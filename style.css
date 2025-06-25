@@ -58,32 +58,75 @@ h1, h2, h3, h4 {
   transform: translateY(0);
 }
 
-.hero h1 {
-  font-size: 4rem;
-  text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  color: #ddd;
-  margin-top: 1rem;
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 55%; /* lower to avoid overlapping logo */
+  left: 50%;
+  transform: translate(-50%, -30%);
+  z-index: 2;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  max-width: 600px;
+  color: #fcd974;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
+}
+
+.overlay-text.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.overlay-text h1 {
+  font-size: 3rem;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.1em;
+  margin: 1rem 0;
+}
+
+.overlay-text p {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
 }
 
 .cta-button {
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: 2px solid #fcd974;
   color: #fcd974;
-  padding: 0.8rem 2rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 40px;
   background: transparent;
-  box-shadow: 0 0 10px rgba(252, 217, 116, 0.4);
   text-decoration: none;
+  box-shadow: 0 0 12px rgba(252, 217, 116, 0.4);
 }
 
 .cta-button:hover {
   background: #fcd974;
   color: #000;
 }
+
 
 main {
   padding: 2rem;
