@@ -76,9 +76,9 @@ h1, h2, h3, h4 {
 
 .overlay-text {
   position: absolute;
-  top: 55%; /* lower to avoid overlapping logo */
+  top: 60%; /* you can adjust this slightly as needed */
   left: 50%;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
   background: rgba(0, 0, 0, 0.6);
@@ -91,6 +91,7 @@ h1, h2, h3, h4 {
   transition: opacity 1.5s ease, transform 1.5s ease;
   box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
 }
+
 
 .overlay-text.visible {
   opacity: 1;
