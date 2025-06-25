@@ -40,9 +40,18 @@ h1, h2, h3, h4 {
 }
 
 .overlay-text {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.5s ease, transform 1.5s ease;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  max-width: 600px;
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
+  color: #fcd974;
+}
+
 }
 .overlay-text.visible {
   opacity: 1;
