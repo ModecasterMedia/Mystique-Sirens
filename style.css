@@ -1,3 +1,4 @@
+/* General Styling */
 body {
   background-color: #0b0b0b;
   background-image: url('bg-ocean.jpg');
@@ -9,6 +10,7 @@ body {
   margin: 0;
 }
 
+/* Typography */
 h1, h2, h3, h4 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
@@ -17,28 +19,30 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-/* Hero Section */
+/* Hero Section with Video */
 .hero {
   position: relative;
   height: 100vh;
-  width: 100%;
   overflow: hidden;
 }
 
 .hero-video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  transform: translate(-50%, -50%);
   object-fit: cover;
-  z-index: 0;
 }
 
 /* Overlay Text */
 .overlay-text {
   position: absolute;
-  top: 55%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -86,78 +90,59 @@ h1, h2, h3, h4 {
   color: #000;
 }
 
-/* Fade-in Animation */
-.fade-in {
-  animation: fadeIn 2s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 /* Schedule Section */
-.schedule {
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
 .schedule .grid {
   display: flex;
   justify-content: center;
-  gap: 3rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.schedule .grid div {
-  max-width: 250px;
-}
-
-/* Featured Episodes */
-.featured {
-  padding: 3rem 1.5rem;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
   text-align: center;
 }
 
+/* Episodes Section */
 .episodes {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
 
 .episode-card {
   position: relative;
-  width: 260px;
-  height: 360px;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(252, 217, 116, 0.15);
+  border: 1px solid #f3e5ab33;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
 .episode-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.episode-card:hover img {
+  transform: scale(1.05);
 }
 
 .episode-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(11, 11, 11, 0.6);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: #fcd974;
-  padding: 1rem;
+  justify-content: center;
+  text-align: center;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .episode-card:hover .episode-overlay {
@@ -166,51 +151,142 @@ h1, h2, h3, h4 {
 
 .play-icon {
   width: 40px;
-  height: 40px;
   margin-bottom: 1rem;
 }
 
+.episode-overlay h3 {
+  color: #f3e5ab;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
 .preview-link {
-  color: #fcd974;
-  font-size: 0.9rem;
   margin-top: 1rem;
+  font-weight: bold;
+  color: #f3e5ab;
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #f3e5ab;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
 
 .preview-link:hover {
-  text-decoration: underline;
+  background: #f3e5ab;
+  color: #000;
 }
 
-/* Coming Soon Section */
-.coming-soon {
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
-.coming-cards {
+/* Coming Soon Cards */
+.card-grid {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
 
-.coming-card {
-  width: 220px;
-  border: 1px solid #fcd97422;
-  border-radius: 8px;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 280px;
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 12px rgba(252, 217, 116, 0.1);
+  border: 1px solid #f3e5ab33;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
 }
 
-.coming-card img {
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-text {
+  background: rgba(0, 0, 0, 0.6);
   width: 100%;
-  height: 280px;
-  object-fit: cover;
+  min-height: 120px;
+  padding: 1rem;
+  color: #f3e5ab;
+  text-align: center;
+  backdrop-filter: blur(4px);
 }
 
-.coming-card h4 {
-  font-size: 1rem;
+.card-text h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  line-height: 1.4;
+  color: #fcd974;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.card-text .label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #d6c386;
+  margin-bottom: 0.25rem;
+}
+
+/* Subscribe Section */
+.subscribe {
+  background: radial-gradient(circle at center, #1c1c1c 0%, #0e0e0e 100%);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #222;
+  position: relative;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.subscribe form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subscribe input {
   padding: 1rem;
-  color: #f4e3b2;
+  border: none;
+  border-radius: 8px;
+  width: 240px;
+  font-size: 1rem;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.subscribe button {
+  padding: 1rem 2rem;
+  background: linear-gradient(145deg, #f3e5ab, #d6c386);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: #000;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe button:hover {
+  background: #f9ecbe;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #b6b6b6;
+  padding: 2rem 1rem;
+  background: #000;
+  border-top: 1px solid #222;
+  font-family: 'Lexend Deca', sans-serif;
+  letter-spacing: 0.05em;
 }
