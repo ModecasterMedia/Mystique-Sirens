@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mystique Sirens</title>
+  <meta name="description" content="Explore the mystique and allure of hidden beauty, secret stories, and visual elegance." />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <h2 class="logo">Mystique Sirens</h2>
+    <nav>
+      <a href="#schedule">Schedule</a>
+      <a href="#featured">Featured</a>
+      <a href="#coming">Coming Soon</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="mystique-intro.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content fade-in">
+    <h1>Mystique Sirens</h1>
+    <p class="hero-subtitle">Unlocking the Mysteries of Hidden Beauty</p>
+    <a href="#" class="cta-button">TRAILER COMING SOON</a>
+  </div>
+</div>
+
+
+  <div class="overlay-text">
+    <h1>Mystique Sirens</h1>
+    <p>Unlocking the Mysteries of Hidden Beauty</p>
+    <a href="#trailer" class="cta-button">Trailer Coming Soon</a>
+  </div>
+</header>
+
+<main>
+  <section class="schedule">
+    <h2>Series Schedule</h2>
+    <div class="grid">
+      <div><strong>August</strong><p>The Heiress Who Chose Mystery Over Fame</p></div>
+      <div><strong>September</strong><p>The Secret Lives of Famous Models</p></div>
+      <div><strong>October</strong><p>Silhouettes in Obscurity</p></div>
+    </div>
+  </section>
+
+  <section class="featured">
+    <h2>Featured Episodes</h2>
+    <div class="episodes">
+      <div class="episode-card">
+        <img src="episode_img.png" alt="Sirens of the Past">
+        <div class="episode-overlay">
+          <img src="play-icon.svg" alt="Play" class="play-icon">
+          <h3>Sirens of the Past</h3>
+          <a href="#" class="preview-link">▶ Watch Preview</a>
+        </div>
+      </div>
+
+      <div class="episode-card">
+        <img src="episode_img.png" alt="Voices in the Deep">
+        <div class="episode-overlay">
+          <img src="play-icon.svg" alt="Play" class="play-icon">
+          <h3>Voices in the Deep</h3>
+          <a href="#" class="preview-link">▶ Watch Preview</a>
+        </div>
+      </div>
+
+      <div class="episode-card">
+        <img src="episode_img.png" alt="Secrets of the Sea">
+        <div class="episode-overlay">
+          <img src="play-icon.svg" alt="Play" class="play-icon">
+          <h3>Secrets of the Sea</h3>
+          <a href="#" class="preview-link">▶ Watch Preview</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <section class="coming-soon">
+  <h2>Coming Soon</h2>
+  <div class="card-grid">
+
+    <div class="card" style="background-image: url('coming-soon-1.png');">
+      <div class="card-text">
+        <p class="label">Coming Soon</p>
+        <h3>The Heiress Who Chose Mystery Over Fame</h3>
+      </div>
+    </div>
+
+    <div class="card" style="background-image: url('coming-soon-2.png');">
+      <div class="card-text">
+        <p class="label">Coming Soon</p>
+        <h3>Deepwater Riddles</h3>
+      </div>
+    </div>
+
+    <div class="card" style="background-image: url('episode_img.png');">
+      <div class="card-text">
+        <p class="label">Coming Soon</p>
+        <h3>Elegy of the Lost</h3>
+      </div>
+    </div>
+
+    <div class="card" style="background-image: url('episode_img.png');">
+      <div class="card-text">
+        <p class="label">Coming Soon</p>
+        <h3>Phantom Currents</h3>
+      </div>
+    </div>
+
+    <div class="card" style="background-image: url('episode_img.png');">
+      <div class="card-text">
+        <p class="label">Coming Soon</p>
+        <h3>The Allure of AI</h3>
+      </div>
+    </div>
+
+    <div class="card" style="background-image: url('episode_img.png');">
+      <div class="card-text">
+        <p class="label">Coming Soon</p>
+        <h3>Whispers of the Forgotten</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <section class="subscribe">
+    <h2>Unlock the Secrets Untold — Subscribe for More Exclusive Updates.</h2>
+    <form action="https://formspree.io/f/xjkreqoo" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <button type="submit">Unlock the Untold</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  © Mystique Sirens 2025. All rights reserved.
+</footer>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.querySelector('.overlay-text');
+    setTimeout(() => {
+      overlay.classList.add('visible');
+    }, 1000);
+  });
+</script>
+
+</body>
+</html>
