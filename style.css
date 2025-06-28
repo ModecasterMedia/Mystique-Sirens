@@ -1,3 +1,9 @@
+/* Global layout reset */
+html, body {
+  height: 100%;
+  padding: 0;
+}
+
 /* General Styling */
 body {
   background-color: #0b0b0b;
@@ -10,33 +16,28 @@ body {
   margin: 0;
 }
 
-/* Typography */
-h1, h2, h3, h4 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: #fcd974;
-  text-align: center;
-}
-
-/* Navigation */
+/* Ensure site-header can contain full-height hero */
 .site-header {
-  position: fixed;
-  top: 0;
+  position: relative;
   width: 100%;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  background: transparent;
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Keep nav on top of hero video */
 .nav-container {
+  position: relative;
+  z-index: 10;
+  padding: 1rem 2rem;
   display: flex;
   width: 100%;
   max-width: 1200px;
   justify-content: space-between;
   align-items: center;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .site-header .logo {
@@ -372,9 +373,10 @@ footer {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .schedule .grid {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
+}
 
   .hero-content h1 {
     font-size: 2.5rem;
