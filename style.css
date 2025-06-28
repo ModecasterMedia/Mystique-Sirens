@@ -188,6 +188,16 @@ body {
 }
 
 /* Featured Episodes */
+
+section h2 {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  color: #fcd974;
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 2rem;
+}
+
 .episodes {
   display: flex;
   flex-wrap: wrap;
