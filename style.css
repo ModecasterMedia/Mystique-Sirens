@@ -112,10 +112,9 @@ nav a:hover {
 /* TEXT GLOW */
 .glow-text {
   color: #fcd974;
-  text-shadow: 0 0 5px rgba(252, 217, 116, 0.6),
-               0 0 10px rgba(252, 217, 116, 0.4),
-               0 0 20px rgba(252, 217, 116, 0.2);
+  text-shadow: 0 0 2px rgba(252, 217, 116, 0.25);
 }
+
 
 .hero-content h1 {
   font-size: 5rem;
