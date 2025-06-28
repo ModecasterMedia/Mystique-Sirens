@@ -139,18 +139,19 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
-  max-width: 1000px;
-  margin: 2rem auto;
-  text-align: center;
+  column-gap: 4rem;
+  row-gap: 2rem;
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1rem;
 }
 
 .schedule .grid div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 280px;
+  flex: 1 1 300px;
+  min-width: 260px;
+  max-width: 300px;
 }
+
 
 .schedule .grid div strong {
   color: #fcd974;
