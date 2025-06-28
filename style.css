@@ -161,7 +161,11 @@ nav a:hover {
   padding: 4rem 1rem;
   text-align: center;
 }
-
+.schedule .section-container h2,
+.featured .section-container h2,
+.coming-soon .section-container h2 {
+  margin-bottom: 2rem;
+}
 
 /* SCHEDULE */
 .schedule .grid {
