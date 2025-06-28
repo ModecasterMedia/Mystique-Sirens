@@ -1,6 +1,7 @@
 /* Global layout reset */
 html, body {
   height: 100%;
+  margin: 0;
   padding: 0;
 }
 
@@ -13,10 +14,9 @@ body {
   background-attachment: fixed;
   color: #f4e3b2;
   font-family: 'Lexend Deca', sans-serif;
-  margin: 0;
 }
 
-/* Ensure site-header can contain full-height hero */
+/* Header */
 .site-header {
   position: relative;
   width: 100%;
@@ -27,7 +27,6 @@ body {
   flex-direction: column;
 }
 
-/* Keep nav on top of hero video */
 .nav-container {
   position: relative;
   z-index: 10;
@@ -95,17 +94,40 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 4rem;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 1.1;
   color: #fcd974;
-  text-shadow: 0 0 15px rgba(252, 217, 116, 0.4);
-  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(252, 217, 116, 0.4), 0 0 40px rgba(252, 217, 116, 0.1);
+  margin-bottom: 1.5rem;
   font-family: 'Cormorant Garamond', serif;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  color: #ffffff;
-  margin: 1rem 0 2rem;
+  font-size: 1.4rem;
+  color: #f4e3b2;
+  margin-bottom: 2.5rem;
+}
+
+.cta-button {
+  font-size: 1rem;
+  border: 2px solid #fcd974;
+  color: #fcd974;
+  padding: 0.75rem 2.5rem;
+  border-radius: 40px;
+  background: transparent;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(252, 217, 116, 0.3);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #fcd974;
+  color: #000;
 }
 
 @keyframes fadeInUp {
@@ -119,22 +141,6 @@ body {
   }
 }
 
-.cta-button {
-  font-size: 1rem;
-  border: 2px solid #fcd974;
-  color: #fcd974;
-  padding: 0.6rem 1.5rem;
-  border-radius: 40px;
-  background: transparent;
-  text-decoration: none;
-  box-shadow: 0 0 12px rgba(252, 217, 116, 0.4);
-}
-
-.cta-button:hover {
-  background: #fcd974;
-  color: #000;
-}
-
 /* Schedule Section */
 .schedule {
   padding: 4rem 1rem;
@@ -142,6 +148,10 @@ body {
 
 .schedule h2 {
   margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #fcd974;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .schedule .grid {
@@ -177,8 +187,7 @@ body {
   line-height: 1.4;
 }
 
-
-/* Episodes Section */
+/* Featured Episodes */
 .episodes {
   display: flex;
   flex-wrap: wrap;
@@ -189,61 +198,58 @@ body {
 }
 
 .episode-card {
-  position: relative;
   width: 300px;
+  text-align: center;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
   height: 200px;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #f3e5ab33;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
-.episode-card img {
+.image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
 }
 
-.episode-card:hover img {
-  transform: scale(1.05);
-}
-
-.episode-overlay {
+.play-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-.episode-card:hover .episode-overlay {
+.image-wrapper:hover .play-overlay {
   opacity: 1;
 }
 
 .play-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 1rem;
+  width: 50px;
+  height: 50px;
   filter: drop-shadow(0 0 6px #fcd974aa);
 }
 
-.episode-overlay h3 {
-  color: #f3e5ab;
+.episode-title {
+  color: #fcd974;
   font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  margin: 1rem 0 0.5rem;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .preview-link {
-  margin-top: 1rem;
   font-weight: bold;
   color: #f3e5ab;
   text-decoration: none;
+  display: inline-block;
   padding: 0.5rem 1rem;
   border: 1px solid #f3e5ab;
   border-radius: 6px;
@@ -370,10 +376,10 @@ footer {
   letter-spacing: 0.05em;
 }
 
-/* Responsive Adjustments */
+/* Responsive Fixes */
 @media (max-width: 768px) {
   .schedule .grid {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
 
