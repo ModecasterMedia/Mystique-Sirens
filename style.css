@@ -1,411 +1,63 @@
-/* Global layout reset */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* General Styling */
-body {
-  background-color: #0b0b0b;
-  background-image: url('bg-ocean.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #f4e3b2;
-  font-family: 'Lexend Deca', sans-serif;
-}
-
-/* Header */
-.site-header {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  background: transparent;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-}
-
-.nav-container {
-  position: relative;
-  z-index: 10;
-  padding: 1rem 2rem;
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.site-header .logo {
-  font-family: 'Cormorant Garamond', serif;
+/* Glow effect for golden text */
+.glow-text {
   color: #fcd974;
-  margin: 0;
-  font-size: 1.5rem;
+  text-shadow:
+    0 0 5px rgba(252, 217, 116, 0.6),
+    0 0 10px rgba(252, 217, 116, 0.4),
+    0 0 20px rgba(252, 217, 116, 0.2);
 }
 
-.site-header nav a {
-  margin-left: 2rem;
-  color: #fcd974;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.site-header nav a:hover {
-  text-decoration: underline;
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 1;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding-top: 30vh;
-  animation: fadeInUp 1.5s ease forwards;
-  opacity: 0;
-}
-
-.hero-content h1 {
-  font-size: 5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  line-height: 1.1;
-  color: #fcd974;
-  text-shadow: 0 0 20px rgba(252, 217, 116, 0.4), 0 0 40px rgba(252, 217, 116, 0.1);
-  margin-bottom: 1.5rem;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.hero-subtitle {
-  font-size: 1.4rem;
-  color: #f4e3b2;
-  margin-bottom: 2.5rem;
+/* CTA pulse animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(252, 217, 116, 0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(252, 217, 116, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(252, 217, 116, 0); }
 }
 
 .cta-button {
-  font-size: 1rem;
-  border: 2px solid #fcd974;
-  color: #fcd974;
-  padding: 0.75rem 2.5rem;
-  border-radius: 40px;
-  background: transparent;
-  text-decoration: none;
-  box-shadow: 0 0 15px rgba(252, 217, 116, 0.3);
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  margin-top: 2rem;
-  transition: all 0.3s ease;
+  animation: pulse 2.5s infinite;
 }
 
-.cta-button:hover {
-  background: #fcd974;
-  color: #000;
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Schedule Section */
-.schedule {
-  padding: 4rem 1rem;
-}
-
-.schedule h2 {
-  margin-bottom: 2rem;
-  text-align: center;
-  font-size: 2rem;
-  color: #fcd974;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.schedule .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  max-width: 960px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.schedule .grid div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.schedule .grid div strong {
-  color: #fcd974;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  font-family: 'Cormorant Garamond', serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.schedule .grid div p {
-  margin: 0;
-  color: #f4e3b2;
-  font-family: 'Lexend Deca', sans-serif;
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-/* Featured Episodes */
-
-.section-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-section h2 {
-  text-align: center;
-  font-family: 'Cormorant Garamond', serif;
-  color: #fcd974;
-  font-size: 2rem;
-  letter-spacing: 0.08em;
-  margin-bottom: 2rem;
-}
-
-.episodes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem auto;
-  max-width: 1200px;
-}
-
-.episode-card {
-  width: 300px;
-  text-align: center;
-}
-
-.image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #f3e5ab33;
-}
-
-.image-wrapper img {
+/* Improve hero overlay with glow rays */
+.hero-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background: radial-gradient(ellipse at center, rgba(252, 217, 116, 0.12) 0%, transparent 60%);
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 2;
 }
 
-.play-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+/* Enrich image wrapper with subtle cinematic grade */
+.image-wrapper {
+  box-shadow: 0 0 20px rgba(252, 217, 116, 0.1);
+  filter: brightness(0.85) contrast(1.1);
 }
 
-.image-wrapper:hover .play-overlay {
-  opacity: 1;
-}
-
-.play-icon {
-  width: 50px;
-  height: 50px;
-  filter: drop-shadow(0 0 6px #fcd974aa);
-}
-
-.episode-title {
-  color: #fcd974;
-  font-size: 1.4rem;
-  margin: 1rem 0 0.5rem;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.preview-link {
-  font-weight: bold;
-  color: #f3e5ab;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid #f3e5ab;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-.preview-link:hover {
-  background: #f3e5ab;
-  color: #000;
-}
-
-/* Coming Soon Cards */
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem auto;
-  max-width: 1200px;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 280px;
-  height: 380px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #fcd97433;
-  box-shadow: 0 0 20px rgba(252, 217, 116, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.03);
-}
-
+/* Gradient fade on card text */
 .card-text {
-  background: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  min-height: 120px;
-  padding: 1.5rem 1rem;
-  color: #f3e5ab;
-  text-align: center;
-  backdrop-filter: blur(4px);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 80%, rgba(0, 0, 0, 0.1) 100%);
 }
 
-.card-text h3 {
-  font-size: 1.2rem;
-  margin: 0;
-  line-height: 1.4;
-  color: #fcd974;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.card-text .label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #d6c386;
-  margin-bottom: 0.25rem;
-}
-
-/* Subscribe Section */
-.subscribe {
-  background: radial-gradient(circle at center, #1c1c1c 0%, #0e0e0e 100%);
-  padding: 5rem 2rem 4rem;
-  text-align: center;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #222;
-  position: relative;
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
-}
-
-.subscribe form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.subscribe input {
-  padding: 1rem;
-  border: none;
-  border-radius: 8px;
-  width: 240px;
-  font-size: 1rem;
-  background: #fff;
-  color: #000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.subscribe button {
-  padding: 1rem 2rem;
-  background: linear-gradient(145deg, #f3e5ab, #d6c386);
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  color: #000;
-  font-size: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.subscribe button:hover {
-  background: #f9ecbe;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #b6b6b6;
-  padding: 2rem 1rem;
-  background: #000;
-  border-top: 1px solid #222;
-  font-family: 'Lexend Deca', sans-serif;
-  letter-spacing: 0.05em;
-}
-
-/* Responsive Fixes */
-@media (max-width: 768px) {
-  .schedule .grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
+/* Enhanced mobile support */
+@media (max-width: 500px) {
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
   }
 
-  .episode-card,
-  .card {
-    width: 90%;
-    height: auto;
+  .cta-button {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .subscribe input,
+  .subscribe button {
+    width: 100%;
+    max-width: 90%;
   }
 }
